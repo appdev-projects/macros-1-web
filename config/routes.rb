@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
-  # This is a blank app! Pick your first screen, build out the RCAV, and go from there. E.g.:
-  # get("/your_first_screen", { :controller => "pages", :action => "first" })
+  # Write your routes here.
+
+
+
+
+
+  
+  # Solutions below. Don't peek until you try it yourself and get stuck!
+
+  get("/solutions/blank_form", { :controller => "solutions", :action => "display_form" })
+
+  post("/solutions/process_form", { :controller => "solutions", :action => "process_inputs" })
 end

@@ -1,0 +1,32 @@
+<h1>Results</h1>
+
+<% if @the_image.present? %>
+  <div>
+    <img src="<%= @the_image_data_uri %>" width="480">
+  </div>
+<% end %>
+
+<% if @the_description.present? %>
+  <div>
+    <%= simple_format(@the_description) %>
+  </div>
+<% end %>
+
+<dl>
+  <dt>Carbs (g)</dt>
+  <dd><%= @g_carbs %></dd>
+
+  <dt>Protein (g)</dt>
+  <dd><%= @g_protein %></dd>
+
+  <dt>Fat (g)</dt>
+  <dd><%= @g_fat %></dd>
+
+  <dt>Total calories (kcal) </dt>
+  <dd><%= @kcal %></dd>
+
+  <dt>Notes</dt>
+  <dd><%= simple_format(@notes) %></dd>
+</dl>
+
+<p><a href="/solutions/blank_form">Estimate another</a></p>

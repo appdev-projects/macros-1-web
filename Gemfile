@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "file_to_data_uri"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
