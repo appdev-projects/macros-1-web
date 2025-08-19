@@ -13,20 +13,56 @@
 <% end %>
 
 <dl>
-  <dt>Carbs (g)</dt>
+  <dt>Total carbs (g)</dt>
   <dd><%= @g_carbs %></dd>
 
-  <dt>Protein (g)</dt>
+  <dt>Total protein (g)</dt>
   <dd><%= @g_protein %></dd>
 
-  <dt>Fat (g)</dt>
+  <dt>Total fat (g)</dt>
   <dd><%= @g_fat %></dd>
 
   <dt>Total calories (kcal) </dt>
   <dd><%= @kcal %></dd>
 
-  <dt>Notes</dt>
-  <dd><%= simple_format(@notes) %></dd>
+  <dt>Rationale</dt>
+  <dd><%= simple_format(@rationale) %></dd>
 </dl>
+
+<h2>Items</h2>
+
+<ol>
+  <% @list_of_items.each do |an_item| %>
+    <li>
+      <dl>
+        <dt>Description</dt>
+        <dd>
+          <%= an_item.fetch(:description) %>
+        </dd>
+
+        <dt>Carbs (g)</dt>
+        <dd>
+          <%= an_item.fetch(:grams_of_carbs) %>
+        </dd>
+
+        <dt>Protein (g)</dt>
+        <dd>
+          <%= an_item.fetch(:grams_of_protein) %>
+        </dd>
+
+        <dt>Fat (g)</dt>
+        <dd>
+          <%= an_item.fetch(:grams_of_fat) %>
+        </dd>
+
+        <dt>Calories (kcal)</dt>
+        <dd>
+          <%= an_item.fetch(:calories) %>
+        </dd>
+
+      </dl>
+    </li>
+  <% end %>
+</ul>
 
 <p><a href="/solutions/blank_form">Estimate another</a></p>
