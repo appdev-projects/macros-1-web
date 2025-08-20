@@ -1,5 +1,5 @@
-# rails-8-template
+# macros-1-web
 
-For your AppDev Projects!
+No target
 
 Some rights reserved — see [LICENSE.txt](LICENSE.txt)
