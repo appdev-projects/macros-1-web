@@ -22,13 +22,13 @@ default: &default
 
 development:
   <<: *default
-  database: rails_8_template_development
+  database: macros_web_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: rails_8_template
+  #username: macros_web
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -56,7 +56,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_8_template_test
+  database: macros_web_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,13 +85,13 @@ production:
     encoding: utf8
   cache:
     <<: *primary_production
-    database: rails_8_template_production_cache
+    database: macros_web_production_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: rails_8_template_production_queue
+    database: macros_web_production_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: rails_8_template_production_cable
+    database: macros_web_production_cable
     migrations_paths: db/cable_migrate
