@@ -1,5 +1,4 @@
 class SolutionsController < ApplicationController
-
   def display_form
     render({ :template => "solution_templates/new_form" })
   end
@@ -119,5 +118,4 @@ class SolutionsController < ApplicationController
 
     render({ :template => "solution_templates/results" })
   end
-
 end
